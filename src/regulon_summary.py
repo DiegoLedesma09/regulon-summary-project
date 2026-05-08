@@ -264,7 +264,19 @@ def parse_arguments():
 
 
 def filter_interactions_by_regulon(interactions, regulon):
-    """Devuelve solo las interacciones cuyos TF aparecen en el regulon filtrado."""
+    """
+    Filtra las interacciones por regulón.
+
+    Responsabilidad:
+        Conservar únicamente las interacciones cuyos TFs aparecen en el regulón filtrado.
+
+    Entrada:
+        interactions (list[tuple[str, str, str]]): Lista de interacciones (TF, gen, efecto).
+        regulon (dict): Diccionario con los TFs válidos después del filtrado.
+
+    Salida:
+        list[tuple[str, str, str]]: Lista de interacciones filtradas.
+    """
     return [interaction for interaction in interactions if interaction[0] in regulon]
 
 
