@@ -1,4 +1,4 @@
-from filters import filter_by_min_genes, filter_by_type
+from .filters import filter_by_min_genes, filter_by_type
 
 regulon = {
     "CRP": {
